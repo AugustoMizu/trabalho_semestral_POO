@@ -40,23 +40,23 @@ public class Main {
         System.out.println("3 - Excluir");
         System.out.println("4 - Listar");
         System.out.println("0 - Sair");
-        System.out.println("Escolha: ");
+
     }
 
 
     // ---------- incluir usuario ----------
-    private static void incluir(Administrador admin, List<Usuario> usuarios) {
-        System.out.println("1 - Usuario (Comprador ou Vendedor)");
-        System.out.println("2 - Item no estoque de um Vendedor");
-        System.out.print("Escolha: ");
-        int escolha = Integer.parseInt(scanner.nextLine());
-
-        switch (escolha) {
-            case 1 -> incluirUsuario(usuarios);
-            case 2 -> incluirEstoque(admin);
-            default -> System.out.println("Opcao invalida.");
-        }
-    }
+//    private static void incluir(Administrador admin, List<Usuario> usuarios) {
+//        System.out.println("1 - Usuario (Comprador ou Vendedor)");
+//        System.out.println("2 - Item no estoque de um Vendedor");
+//        System.out.print("Escolha: ");
+//        int escolha = Integer.parseInt(scanner.nextLine());
+//
+//        switch (escolha) {
+//            case 1 -> incluirUsuario(usuarios);
+//            case 2 -> incluirEstoque(admin);
+//            default -> System.out.println("Opcao invalida.");
+//        }
+//    }
 
 }
 
