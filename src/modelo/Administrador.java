@@ -15,6 +15,13 @@ public class Administrador extends Usuario implements Gerenciar {
 
     @Override
     public Usuario buscarRegistro(String parametro) {
+        String p = parametro;
+        for (Usuario u : usuarios){
+            if (String.valueOf(u.getId()).equals(p) || u.getNome().equalsIgnoreCase(p)){
+                return u;
+                }
+            }
+
         return null;
     }
 
@@ -25,11 +32,13 @@ public class Administrador extends Usuario implements Gerenciar {
 
     @Override
     public void cadastrar() {
+        System.out.println("Conta do usuario cadastrada.");
 
     }
 
     @Override
     public void excluirConta() {
+        System.out.println("Conta do usuário excluida.");
 
     }
 }
