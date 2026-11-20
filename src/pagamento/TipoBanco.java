@@ -17,7 +17,19 @@ public enum TipoBanco implements PagamentoOnline {
         this.taxaServico = taxaServico;
         this.fabrica = fabrica;
     }
+        
+    public String getNome() {
+		return nome;
+	}
 
+	public double getTaxaServico() {
+		return taxaServico;
+	}
+
+	public PagamentoOnline criarInstancia() {
+    	return fabrica.get();
+    }
+    
     @Override
     public boolean pagar(Double valor) {
         double total = valor + (valor * this.taxaServico);
@@ -25,7 +37,4 @@ public enum TipoBanco implements PagamentoOnline {
         return true;
     }
     
-    public PagamentoOnline criarInstancia() {
-        return fabrica.get();
-    }
 }
